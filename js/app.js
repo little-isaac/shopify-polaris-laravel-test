@@ -77213,12 +77213,7 @@ var Dashboard = function (_React$Component) {
     function Dashboard(props) {
         _classCallCheck(this, Dashboard);
 
-        var _this = _possibleConstructorReturn(this, (Dashboard.__proto__ || Object.getPrototypeOf(Dashboard)).call(this, props));
-
-        _this.contextTypes = {
-            easdk: __WEBPACK_IMPORTED_MODULE_3_prop_types__["object"]
-        };
-        return _this;
+        return _possibleConstructorReturn(this, (Dashboard.__proto__ || Object.getPrototypeOf(Dashboard)).call(this, props));
     }
 
     _createClass(Dashboard, [{
@@ -77229,8 +77224,7 @@ var Dashboard = function (_React$Component) {
                 __WEBPACK_IMPORTED_MODULE_2__shopify_polaris__["b" /* CalloutCard */],
                 {
                     title: 'Customize the style of your checkout',
-                    illustration: 'https://cdn.shopify.com/s/assets/admin/checkout/settings-customizecart-705f57c725ac05be5a34ec20c05b94298cb8afd10aac7bd9c7ad02030f48cfa0.svg',
-                    primaryAction: { content: 'Customize checkout', url: 'https://www.shopify.com' }
+                    illustration: 'https://cdn.shopify.com/s/assets/admin/checkout/settings-customizecart-705f57c725ac05be5a34ec20c05b94298cb8afd10aac7bd9c7ad02030f48cfa0.svg'
                 },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'p',
@@ -77245,6 +77239,10 @@ var Dashboard = function (_React$Component) {
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["a"] = (Dashboard);
+
+Dashboard.contextTypes = {
+    easdk: __WEBPACK_IMPORTED_MODULE_3_prop_types__["object"]
+};
 
 /***/ }),
 /* 468 */

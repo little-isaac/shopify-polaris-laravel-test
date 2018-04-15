@@ -59,7 +59,7 @@
             }
         </style>
         <!--<link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/1.14.1/polaris.min.css" />-->
-        <link href="{{ url('css/app.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div class="container">
@@ -71,6 +71,6 @@
             </div>
         </div>
 
-        <script src="{{ url('js/app.js') }}?t={{ time() }}" ></script>
+        <script src="{{ secure_asset('js/app.js') }}?t={{ time() }}" ></script>
     </body>
 </html>

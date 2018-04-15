@@ -19999,7 +19999,7 @@ module.exports = exports['default'];
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(171);
-module.exports = __webpack_require__(472);
+module.exports = __webpack_require__(473);
 
 
 /***/ }),
@@ -20012,10 +20012,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Main__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shopify_polaris_embedded__ = __webpack_require__(480);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shopify_polaris_embedded___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__shopify_polaris_embedded__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Login__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_store_Dashboard__ = __webpack_require__(474);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shopify_polaris_styles_css__ = __webpack_require__(467);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_store_Dashboard__ = __webpack_require__(467);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shopify_polaris_styles_css__ = __webpack_require__(468);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shopify_polaris_styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__shopify_polaris_styles_css__);
 __webpack_require__(172);
 
@@ -20032,7 +20033,14 @@ if (document.getElementById('login')) {
     __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Login__["a" /* default */], null), document.getElementById('login'));
 }
 if (document.getElementById('dashboard')) {
-    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_store_Dashboard__["a" /* default */], null), document.getElementById('dashboard'));
+    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2__shopify_polaris_embedded__["EmbeddedApp"],
+        {
+            apiKey: 'd5d77a79f3bda1bd18844814af04e672',
+            shopOrigin: 'https://em-sc-2.myshopify.com'
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_store_Dashboard__["a" /* default */], null)
+    ), document.getElementById('dashboard'));
 }
 
 /***/ }),
@@ -60665,64 +60673,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 207 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-/* An example React component */
-
-var Main = function (_Component) {
-  _inherits(Main, _Component);
-
-  function Main() {
-    _classCallCheck(this, Main);
-
-    return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).apply(this, arguments));
-  }
-
-  _createClass(Main, [{
-    key: 'render',
-    value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'h3',
-          null,
-          'All Products'
-        )
-      );
-    }
-  }]);
-
-  return Main;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-/* unused harmony default export */ var _unused_webpack_default_export = (Main);
-
-/* The if statement is required so as to Render the component on pages that have a div with an ID of "root";  
-*/
-
-// if (document.getElementById('root')) {
-//     ReactDOM.render(<Main />, document.getElementById('root'));
-// }
-
-/***/ }),
+/* 207 */,
 /* 208 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -77233,12 +77184,76 @@ exports.getRectForNode = getRectForNode;
 
 /***/ }),
 /* 467 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_node_fetch__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_node_fetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_node_fetch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shopify_polaris__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+var Dashboard = function (_React$Component) {
+    _inherits(Dashboard, _React$Component);
+
+    function Dashboard(props) {
+        _classCallCheck(this, Dashboard);
+
+        var _this = _possibleConstructorReturn(this, (Dashboard.__proto__ || Object.getPrototypeOf(Dashboard)).call(this, props));
+
+        _this.contextTypes = {
+            easdk: __WEBPACK_IMPORTED_MODULE_3_prop_types__["object"]
+        };
+        return _this;
+    }
+
+    _createClass(Dashboard, [{
+        key: 'render',
+        value: function render() {
+            /* Some css code has been removed for brevity */
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                __WEBPACK_IMPORTED_MODULE_2__shopify_polaris__["b" /* CalloutCard */],
+                {
+                    title: 'Customize the style of your checkout',
+                    illustration: 'https://cdn.shopify.com/s/assets/admin/checkout/settings-customizecart-705f57c725ac05be5a34ec20c05b94298cb8afd10aac7bd9c7ad02030f48cfa0.svg',
+                    primaryAction: { content: 'Customize checkout', url: 'https://www.shopify.com' }
+                },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'p',
+                    null,
+                    'Upload your store\u2019s logo, change colors and fonts, and more.'
+                )
+            );
+        }
+    }]);
+
+    return Dashboard;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["a"] = (Dashboard);
+
+/***/ }),
+/* 468 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(468);
+var content = __webpack_require__(469);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -77246,7 +77261,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(470)(content, options);
+var update = __webpack_require__(471)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -77263,10 +77278,10 @@ if(false) {
 }
 
 /***/ }),
-/* 468 */
+/* 469 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(469)(false);
+exports = module.exports = __webpack_require__(470)(false);
 // imports
 
 
@@ -77277,7 +77292,7 @@ exports.push([module.i, "@-webkit-keyframes Polaris-global--skeletonShimmerAnima
 
 
 /***/ }),
-/* 469 */
+/* 470 */
 /***/ (function(module, exports) {
 
 /*
@@ -77359,7 +77374,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 470 */
+/* 471 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -77405,7 +77420,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(471);
+var	fixUrls = __webpack_require__(472);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -77718,7 +77733,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 471 */
+/* 472 */
 /***/ (function(module, exports) {
 
 
@@ -77813,67 +77828,1406 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 472 */
+/* 473 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 473 */,
-/* 474 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* 474 */,
+/* 475 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 0 -> Array#forEach
+// 1 -> Array#map
+// 2 -> Array#filter
+// 3 -> Array#some
+// 4 -> Array#every
+// 5 -> Array#find
+// 6 -> Array#findIndex
+var ctx = __webpack_require__(60);
+var IObject = __webpack_require__(226);
+var toObject = __webpack_require__(117);
+var toLength = __webpack_require__(116);
+var asc = __webpack_require__(484);
+module.exports = function (TYPE, $create) {
+  var IS_MAP = TYPE == 1;
+  var IS_FILTER = TYPE == 2;
+  var IS_SOME = TYPE == 3;
+  var IS_EVERY = TYPE == 4;
+  var IS_FIND_INDEX = TYPE == 6;
+  var NO_HOLES = TYPE == 5 || IS_FIND_INDEX;
+  var create = $create || asc;
+  return function ($this, callbackfn, that) {
+    var O = toObject($this);
+    var self = IObject(O);
+    var f = ctx(callbackfn, that, 3);
+    var length = toLength(self.length);
+    var index = 0;
+    var result = IS_MAP ? create($this, length) : IS_FILTER ? create($this, 0) : undefined;
+    var val, res;
+    for (;length > index; index++) if (NO_HOLES || index in self) {
+      val = self[index];
+      res = f(val, index, O);
+      if (TYPE) {
+        if (IS_MAP) result[index] = res;   // map
+        else if (res) switch (TYPE) {
+          case 3: return true;             // some
+          case 5: return val;              // find
+          case 6: return index;            // findIndex
+          case 2: result.push(val);        // filter
+        } else if (IS_EVERY) return false; // every
+      }
+    }
+    return IS_FIND_INDEX ? -1 : IS_SOME || IS_EVERY ? IS_EVERY : result;
+  };
+};
+
+
+/***/ }),
+/* 476 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var hide = __webpack_require__(24);
+module.exports = function (target, src, safe) {
+  for (var key in src) {
+    if (safe && target[key]) target[key] = src[key];
+    else hide(target, key, src[key]);
+  } return target;
+};
+
+
+/***/ }),
+/* 477 */
+/***/ (function(module, exports) {
+
+module.exports = function (it, Constructor, name, forbiddenField) {
+  if (!(it instanceof Constructor) || (forbiddenField !== undefined && forbiddenField in it)) {
+    throw TypeError(name + ': incorrect invocation!');
+  } return it;
+};
+
+
+/***/ }),
+/* 478 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var ctx = __webpack_require__(60);
+var call = __webpack_require__(441);
+var isArrayIter = __webpack_require__(442);
+var anObject = __webpack_require__(25);
+var toLength = __webpack_require__(116);
+var getIterFn = __webpack_require__(444);
+var BREAK = {};
+var RETURN = {};
+var exports = module.exports = function (iterable, entries, fn, that, ITERATOR) {
+  var iterFn = ITERATOR ? function () { return iterable; } : getIterFn(iterable);
+  var f = ctx(fn, that, entries ? 2 : 1);
+  var index = 0;
+  var length, step, iterator, result;
+  if (typeof iterFn != 'function') throw TypeError(iterable + ' is not iterable!');
+  // fast case for arrays with default iterator
+  if (isArrayIter(iterFn)) for (length = toLength(iterable.length); length > index; index++) {
+    result = entries ? f(anObject(step = iterable[index])[0], step[1]) : f(iterable[index]);
+    if (result === BREAK || result === RETURN) return result;
+  } else for (iterator = iterFn.call(iterable); !(step = iterator.next()).done;) {
+    result = call(iterator, f, step.value, entries);
+    if (result === BREAK || result === RETURN) return result;
+  }
+};
+exports.BREAK = BREAK;
+exports.RETURN = RETURN;
+
+
+/***/ }),
+/* 479 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__(26);
+module.exports = function (it, TYPE) {
+  if (!isObject(it) || it._t !== TYPE) throw TypeError('Incompatible receiver, ' + TYPE + ' required!');
+  return it;
+};
+
+
+/***/ }),
+/* 480 */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_node_fetch__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_node_fetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_node_fetch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shopify_polaris__ = __webpack_require__(210);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 
+Object.defineProperty(exports, '__esModule', { value: true });
 
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
+var _classCallCheck = _interopDefault(__webpack_require__(214));
+var _createClass = _interopDefault(__webpack_require__(215));
+var _possibleConstructorReturn = _interopDefault(__webpack_require__(220));
+var _inherits = _interopDefault(__webpack_require__(245));
+var React = __webpack_require__(7);
+var tslib_1 = __webpack_require__(8);
+var decorators = __webpack_require__(253);
+var _typeof = _interopDefault(__webpack_require__(111));
+var _toConsumableArray = _interopDefault(__webpack_require__(437));
+var PropTypes = __webpack_require__(31);
+var hoistStatics = _interopDefault(__webpack_require__(481));
+var components = __webpack_require__(108);
 
-var Dashboard = function (_React$Component) {
-    _inherits(Dashboard, _React$Component);
+var CoreWeakMap = __webpack_require__(482);
 
-    function Dashboard(props) {
-        _classCallCheck(this, Dashboard);
+var Messenger = function () {
+    function Messenger(target, handlers, options) {
+        _classCallCheck(this, Messenger);
 
-        return _possibleConstructorReturn(this, (Dashboard.__proto__ || Object.getPrototypeOf(Dashboard)).call(this, props));
+        this.target = target;
+        this.handlers = handlers;
+        this.targetOrigin = '*';
+        this.queue = [];
+        this.callbacks = {};
+        this.callbacksToID = new CoreWeakMap();
+        this.callbackIndex = 0;
+        if (typeof window === 'undefined') {
+            return;
+        }
+        this.name = options.name;
+        this.targetOrigin = options.targetOrigin;
+        this.debug = options.debug || false;
+        if (!this.targetOrigin.match(/^http(s)?:\/\//)) {
+            this.warn('warning: targetOrigin should include the protocol');
+        }
+        window.addEventListener('message', this.handleMessage.bind(this), false);
     }
 
-    _createClass(Dashboard, [{
-        key: 'render',
-        value: function render() {
-            /* Some css code has been removed for brevity */
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_2__shopify_polaris__["b" /* CalloutCard */],
-                {
-                    title: 'Customize the style of your checkout',
-                    illustration: 'https://cdn.shopify.com/s/assets/admin/checkout/settings-customizecart-705f57c725ac05be5a34ec20c05b94298cb8afd10aac7bd9c7ad02030f48cfa0.svg',
-                    primaryAction: { content: 'Customize checkout', url: 'https://www.shopify.com' }
-                },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'p',
-                    null,
-                    'Upload your store\u2019s logo, change colors and fonts, and more.'
-                )
-            );
+    _createClass(Messenger, [{
+        key: 'setTarget',
+        value: function setTarget(target) {
+            this.target = target;
+            this.tryToDequeue();
+        }
+    }, {
+        key: 'send',
+        value: function send(message, data) {
+            var normalizedPayload = this.normalizePayload(data);
+            var newMessage = {
+                message: message,
+                data: normalizedPayload
+            };
+            var messageString = JSON.stringify(newMessage);
+            if (this.target != null) {
+                this.log('Posting message: ' + messageString + ' to ' + this.targetOrigin + ' }');
+                this.target.postMessage(messageString, this.targetOrigin);
+            } else {
+                this.log('Queueing message: ' + messageString);
+                this.queue.push(newMessage);
+            }
+            return normalizedPayload;
+        }
+    }, {
+        key: 'tryToDequeue',
+        value: function tryToDequeue() {
+            var queue = this.queue,
+                target = this.target;
+
+            if (target == null || queue.length === 0) {
+                return;
+            }
+            this.queue.forEach(function (message) {
+                target.postMessage(message, '*');
+            });
+            this.queue.length = 0;
+        }
+    }, {
+        key: 'log',
+        value: function log(message) {
+            if (!this.debug) {
+                return;
+            }
+            // eslint-disable-next-line no-console
+            console.log('[' + this.name + ' Messenger]: ' + message);
+        }
+    }, {
+        key: 'warn',
+        value: function warn(message) {
+            if (!this.debug) {
+                return;
+            }
+            // eslint-disable-next-line no-console
+            console.warn('[' + this.name + ' Messenger]: ' + message);
+        }
+    }, {
+        key: 'storeCallback',
+        value: function storeCallback(callback) {
+            // Optimization, so we don’t store a new callback ID for callbacks
+            // we have sent before
+            if (this.callbacksToID.has(callback)) {
+                return this.callbacksToID.get(callback);
+            }
+            var id = 'EASDKCallback' + this.callbackIndex++;
+            this.callbacks[id] = callback;
+            this.callbacksToID.set(callback, id);
+            return id;
+        }
+    }, {
+        key: 'normalizePayload',
+        value: function normalizePayload(payload) {
+            var _this = this;
+
+            if (payload == null) {
+                return payload;
+            }
+            if (typeof payload === 'function') {
+                return this.storeCallback(payload);
+            } else if (payload instanceof Array) {
+                return payload.map(function (newPayload) {
+                    return _this.normalizePayload(newPayload);
+                });
+            } else if ((typeof payload === 'undefined' ? 'undefined' : _typeof(payload)) === 'object') {
+                return Object.keys(payload).reduce(function (newPayload, key) {
+                    newPayload[key] = _this.normalizePayload(payload[key]);
+                    return newPayload;
+                }, {});
+            } else {
+                return payload;
+            }
+        }
+    }, {
+        key: 'handleMessage',
+        value: function handleMessage(event) {
+            if (!this.isFromTargetOrigin(event)) {
+                this.log('client received ' + event.data + ' from unknown origin ' + event.origin + '. Expected ' + this.targetOrigin);
+                return;
+            }
+            this.log('Received message: ' + event.data + ' from ' + event.origin);
+            var receivedMessage = void 0;
+            try {
+                receivedMessage = JSON.parse(event.data);
+            } catch (error) {
+                // eslint-disable-next-line no-console
+                console.error('Received received invalid JSON and cannot process the message. ' + error + ' : ' + event.data + ' : ' + JSON.stringify(event.data));
+                return;
+            }
+            this.invokeCallback(receivedMessage);
+            this.invokeHandler(receivedMessage);
+        }
+    }, {
+        key: 'isFromTargetOrigin',
+        value: function isFromTargetOrigin(_ref) {
+            var origin = _ref.origin;
+
+            return origin != null && origin === this.targetOrigin;
+        }
+    }, {
+        key: 'invokeCallback',
+        value: function invokeCallback(receivedMessage) {
+            var callback = this.callbacks[receivedMessage.message];
+            if (typeof callback === 'function') {
+                // eslint-disable-next-line callback-return
+                callback();
+            }
+        }
+    }, {
+        key: 'invokeHandler',
+        value: function invokeHandler(receivedMessage) {
+            var handler = this.handlers[receivedMessage.message];
+            if (typeof handler === 'function') {
+                handler(receivedMessage.data);
+            }
         }
     }]);
 
-    return Dashboard;
-}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+    return Messenger;
+}();
 
-/* harmony default export */ __webpack_exports__["a"] = (Dashboard);
+function transformBreadcrumb(breadcrumb) {
+    if (breadcrumb.content == null) {
+        throw new Error('No content provided for breadcrumb (' + JSON.stringify(breadcrumb) + ')');
+    }
+    var target = void 0;
+    if (breadcrumb.target) {
+        target = breadcrumb.target;
+    } else if (breadcrumb.url) {
+        target = getTargetFromURL(breadcrumb.url);
+    } else {
+        target = undefined;
+    }
+    return {
+        label: breadcrumb.content,
+        href: breadcrumb.url,
+        target: target,
+        message: target === 'app' ? generateCallback(breadcrumb.url) : breadcrumb.onAction
+    };
+}
+function transformAction(action) {
+    var style = void 0;
+    if (action.disabled) {
+        style = 'disabled';
+    } else if (action.destructive) {
+        style = 'danger';
+    }
+    var target = void 0;
+    if (action.target) {
+        target = action.target;
+    } else if (action.url) {
+        target = getTargetFromURL(action.url);
+    } else {
+        target = undefined;
+    }
+    return {
+        label: action.content,
+        href: action.url,
+        target: target,
+        message: target === 'app' ? generateCallback(action.url) : action.onAction,
+        style: style
+    };
+}
+function transformActionGroup(actionGroup) {
+    return {
+        type: 'dropdown',
+        label: actionGroup.title,
+        links: actionGroup.actions.map(transformAction)
+    };
+}
+function getTargetFromURL(url) {
+    if (url[0] === '/') {
+        return 'shopify';
+    } else if (url.indexOf(window.location.hostname) >= 0 || url[0] !== '/' && url.indexOf('http') !== 0) {
+        return 'app';
+    } else {
+        return 'new';
+    }
+}
+function generateCallback(url) {
+    if (url == null) {
+        return;
+    }
+    return function () {
+        window.location.assign(url);
+    };
+}
+function transformPagination(pagination) {
+    if (pagination == null) {
+        return undefined;
+    }
+    var hasNext = pagination.hasNext,
+        hasPrevious = pagination.hasPrevious,
+        nextURL = pagination.nextURL,
+        previousURL = pagination.previousURL,
+        onNext = pagination.onNext,
+        onPrevious = pagination.onPrevious;
+
+    var finalPagination = {};
+    if (hasNext) {
+        if (onNext) {
+            finalPagination.next = { message: onNext };
+        } else if (nextURL) {
+            finalPagination.next = { href: nextURL };
+        }
+    }
+    if (hasPrevious) {
+        if (onPrevious) {
+            finalPagination.previous = { message: onPrevious };
+        } else if (previousURL) {
+            finalPagination.previous = { href: previousURL };
+        }
+    }
+    return finalPagination;
+}
+
+var Bar = function () {
+    function Bar(messenger) {
+        _classCallCheck(this, Bar);
+
+        this.messenger = messenger;
+    }
+
+    _createClass(Bar, [{
+        key: 'update',
+        value: function update(config) {
+            var title = config.title,
+                icon = config.icon,
+                breadcrumbs = config.breadcrumbs,
+                secondaryActions = config.secondaryActions,
+                actionGroups = config.actionGroups,
+                primaryAction = config.primaryAction,
+                pagination = config.pagination;
+
+            this.messenger.send('Shopify.API.Bar.initialize', {
+                buttons: {
+                    primary: primaryAction ? transformAction(primaryAction) : undefined,
+                    secondary: [].concat(_toConsumableArray((secondaryActions || []).map(transformAction)), _toConsumableArray((actionGroups || []).map(transformActionGroup)))
+                },
+                title: title,
+                icon: icon,
+                breadcrumb: getLastLevelBreadcrumb(breadcrumbs),
+                pagination: transformPagination(pagination)
+            });
+            if (actionGroups) {
+                document.addEventListener('click', this.closeDropdown);
+            } else {
+                document.removeEventListener('click', this.closeDropdown);
+            }
+        }
+    }, {
+        key: 'closeDropdown',
+        value: function closeDropdown() {
+            this.messenger.send('Shopify.API.Bar.closeDropdown');
+        }
+    }]);
+
+    return Bar;
+}();
+
+tslib_1.__decorate([decorators.autobind], Bar.prototype, "closeDropdown", null);
+function getLastLevelBreadcrumb(breadcrumbs) {
+    return breadcrumbs && breadcrumbs.length > 0 ? transformBreadcrumb(breadcrumbs[breadcrumbs.length - 1]) : undefined;
+}
+
+var Modal = function () {
+    function Modal(messenger) {
+        _classCallCheck(this, Modal);
+
+        this.messenger = messenger;
+    }
+
+    _createClass(Modal, [{
+        key: 'open',
+        value: function open(config) {
+            var title = config.title,
+                primaryAction = config.primaryAction,
+                secondaryActions = config.secondaryActions,
+                src = config.src,
+                width = config.width,
+                height = config.height,
+                onClose = config.onClose;
+
+            if (onClose != null) {
+                this.storeCloseCallback(onClose);
+            }
+            this.messenger.send('Shopify.API.Modal.open', {
+                src: src,
+                title: title,
+                width: width,
+                height: height,
+                buttons: {
+                    primary: primaryAction ? transformAction(primaryAction) : undefined,
+                    secondary: secondaryActions ? secondaryActions.map(transformAction) : undefined
+                }
+            });
+        }
+    }, {
+        key: 'alert',
+        value: function alert(config) {
+            var children = config.children,
+                title = config.title,
+                destructive = config.destructive,
+                confirmContent = config.confirmContent,
+                cancelContent = config.cancelContent,
+                onCancel = config.onCancel,
+                onConfirm = config.onConfirm;
+
+            this.storeCloseCallback(function (result) {
+                if (result) {
+                    if (onConfirm) {
+                        onConfirm();
+                    }
+                } else if (onCancel) {
+                    onCancel();
+                }
+            });
+            if (onCancel && cancelContent) {
+                this.messenger.send('Shopify.API.Modal.confirm', {
+                    message: {
+                        title: title,
+                        message: children,
+                        okButton: confirmContent,
+                        cancelButton: cancelContent,
+                        style: destructive ? 'danger' : undefined
+                    }
+                });
+            } else {
+                this.messenger.send('Shopify.API.Modal.alert', {
+                    message: {
+                        title: title,
+                        message: children,
+                        okButton: confirmContent,
+                        style: destructive ? 'danger' : undefined
+                    }
+                });
+            }
+        }
+    }, {
+        key: 'close',
+        value: function close(result, data) {
+            if (this.closeCallback == null) {
+                return;
+            }
+            this.messenger.send('Shopify.API.Modal.close', {
+                result: result,
+                data: data
+            });
+        }
+    }, {
+        key: 'storeCloseCallback',
+        value: function storeCloseCallback(callback) {
+            this.closeCallback = callback;
+        }
+    }, {
+        key: 'callCloseCallback',
+        value: function callCloseCallback(result, data) {
+            var closeCallback = this.closeCallback;
+
+            if (typeof closeCallback === 'function') {
+                delete this.closeCallback;
+                closeCallback(result, data);
+            }
+        }
+    }]);
+
+    return Modal;
+}();
+
+var ResourcePicker = function () {
+    function ResourcePicker(messenger, modal) {
+        _classCallCheck(this, ResourcePicker);
+
+        this.messenger = messenger;
+        this.modal = modal;
+    }
+
+    _createClass(ResourcePicker, [{
+        key: 'close',
+        value: function close() {
+            this.modal.close();
+        }
+    }, {
+        key: 'open',
+        value: function open(_ref) {
+            var title = _ref.title,
+                products = _ref.products,
+                collections = _ref.collections,
+                _ref$allowMultiple = _ref.allowMultiple,
+                allowMultiple = _ref$allowMultiple === undefined ? false : _ref$allowMultiple,
+                _ref$showHidden = _ref.showHidden,
+                showHidden = _ref$showHidden === undefined ? true : _ref$showHidden,
+                onCancel = _ref.onCancel,
+                onSelection = _ref.onSelection;
+
+            this.modal.storeCloseCallback(function (success, data) {
+                if (!success) {
+                    if (onCancel != null) {
+                        onCancel();
+                    }
+                    return;
+                }
+                if (onSelection == null) {
+                    return;
+                }
+                onSelection(data);
+            });
+            var resources = [];
+            if (products) {
+                resources.push('products');
+            }
+            if (collections) {
+                resources.push('collections');
+            }
+            if (collections) {
+                this.messenger.send('Shopify.API.Modal.collectionPicker', {
+                    title: title,
+                    selectMultiple: allowMultiple,
+                    // eslint-disable-next-line camelcase
+                    show_hidden: showHidden,
+                    // eslint-disable-next-line camelcase
+                    selectable_resources: resources
+                });
+            } else {
+                this.messenger.send('Shopify.API.Modal.productPicker', {
+                    title: title,
+                    selectMultiple: allowMultiple,
+                    // eslint-disable-next-line camelcase
+                    show_hidden: showHidden,
+                    // eslint-disable-next-line camelcase
+                    selectable_resources: resources
+                });
+            }
+        }
+    }]);
+
+    return ResourcePicker;
+}();
+
+var EASDK$1 = function () {
+    function EASDK(_ref, metadata) {
+        var _this = this;
+
+        var apiKey = _ref.apiKey,
+            shopOrigin = _ref.shopOrigin,
+            debug = _ref.debug,
+            forceRedirect = _ref.forceRedirect;
+
+        _classCallCheck(this, EASDK);
+
+        checkFrameRedirect(apiKey, shopOrigin, forceRedirect);
+        this.messenger = new Messenger(window.parent, {
+            'Shopify.API.initialize': function ShopifyAPIInitialize(data) {
+                if (data && data.User && data.User.current) {
+                    _this.currentUser = data.User.current;
+                }
+            },
+            'Shopify.API.Modal.close': function ShopifyAPIModalClose(_ref2) {
+                var result = _ref2.result,
+                    data = _ref2.data;
+
+                _this.Modal.callCloseCallback(result, data);
+            }
+        }, {
+            name: 'iframe',
+            targetOrigin: shopOrigin,
+            debug: debug
+        });
+        this.Bar = new Bar(this.messenger);
+        this.Modal = new Modal(this.messenger);
+        this.ResourcePicker = new ResourcePicker(this.messenger, this.Modal);
+        this.messenger.send('Shopify.API.initialize', {
+            apiKey: apiKey,
+            shopOrigin: shopOrigin,
+            metadata: metadata,
+            debug: debug,
+            forceRedirect: forceRedirect
+        });
+    }
+
+    _createClass(EASDK, [{
+        key: 'startLoading',
+        value: function startLoading() {
+            this.messenger.send('Shopify.API.Bar.loading.on');
+        }
+    }, {
+        key: 'stopLoading',
+        value: function stopLoading() {
+            this.messenger.send('Shopify.API.Bar.loading.off');
+        }
+    }, {
+        key: 'showFlashNotice',
+        value: function showFlashNotice(message) {
+            var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+            var _options$error = options.error,
+                error = _options$error === undefined ? false : _options$error;
+
+            var type = error ? 'Shopify.API.flash.error' : 'Shopify.API.flash.notice';
+            this.messenger.send(type, { message: message });
+        }
+    }, {
+        key: 'pushState',
+        value: function pushState(location) {
+            this.messenger.send('Shopify.API.pushState', { location: location });
+        }
+    }, {
+        key: 'redirect',
+        value: function redirect(location) {
+            this.messenger.send('Shopify.API.redirect', { location: location });
+        }
+    }]);
+
+    return EASDK;
+}();
+
+tslib_1.__decorate([decorators.autobind], EASDK$1.prototype, "startLoading", null);
+tslib_1.__decorate([decorators.autobind], EASDK$1.prototype, "stopLoading", null);
+tslib_1.__decorate([decorators.autobind], EASDK$1.prototype, "showFlashNotice", null);
+tslib_1.__decorate([decorators.autobind], EASDK$1.prototype, "pushState", null);
+tslib_1.__decorate([decorators.autobind], EASDK$1.prototype, "redirect", null);
+function checkFrameRedirect(apiKey) {
+    var shopOrigin = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'https://myshopify.com';
+    var forceRedirect = arguments[2];
+
+    if (window !== window.parent) {
+        return;
+    }
+    var redirectUrl = shopOrigin + '/admin/apps/';
+    if (apiKey) {
+        redirectUrl = '' + redirectUrl + apiKey + window.location.pathname + window.location.search;
+    }
+    if (forceRedirect) {
+        window.location.assign(redirectUrl);
+    } else {
+        // eslint-disable-next-line no-console
+        console.warn('Embedded app was not loaded in an iframe and redirecting is disabled. Set forceRedirect to true and this page will redirect to: ' + redirectUrl);
+    }
+}
+
+var contextTypes = {
+    easdk: PropTypes.instanceOf(EASDK$1)
+};
+function withEASDK() {
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        displayName = _ref.displayName;
+
+    return function addEASDK(WrappedComponent) {
+        var WithEASDK = function (_React$Component) {
+            _inherits(WithEASDK, _React$Component);
+
+            function WithEASDK() {
+                _classCallCheck(this, WithEASDK);
+
+                return _possibleConstructorReturn(this, (WithEASDK.__proto__ || Object.getPrototypeOf(WithEASDK)).apply(this, arguments));
+            }
+
+            _createClass(WithEASDK, [{
+                key: 'render',
+                value: function render() {
+                    // TODO: should remove the cast once https://github.com/Microsoft/TypeScript/issues/10727 is resolved
+                    var props = Object.assign({}, this.props, { easdk: this.context.easdk });
+                    return React.createElement(WrappedComponent, props);
+                }
+            }]);
+
+            return WithEASDK;
+        }(React.Component);
+
+        WithEASDK.displayName = 'withEASDK(' + (displayName || components.getDisplayName(WrappedComponent)) + ')';
+        WithEASDK.WrappedComponent = WrappedComponent;
+        WithEASDK.contextTypes = contextTypes;
+        var FinalComponent = hoistStatics(WithEASDK, WrappedComponent);
+        return FinalComponent;
+    };
+}
+
+var Alert$1 = function (_React$PureComponent) {
+    _inherits(Alert, _React$PureComponent);
+
+    function Alert() {
+        _classCallCheck(this, Alert);
+
+        var _this = _possibleConstructorReturn(this, (Alert.__proto__ || Object.getPrototypeOf(Alert)).apply(this, arguments));
+
+        _this.focusReturnPoint = null;
+        return _this;
+    }
+
+    _createClass(Alert, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var open = this.props.open;
+
+            if (open) {
+                this.handleEASDKMessaging();
+                this.focusReturnPoint = document.activeElement;
+            }
+        }
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate(_ref) {
+            var wasOpen = _ref.open;
+            var open = this.props.open;
+
+            if (wasOpen !== open) {
+                this.handleEASDKMessaging();
+            }
+            if (!wasOpen && open) {
+                this.focusReturnPoint = document.activeElement;
+            } else if (wasOpen && !open && this.focusReturnPoint != null && document.contains(this.focusReturnPoint)) {
+                this.focusReturnPoint.focus();
+                this.focusReturnPoint = null;
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return null;
+        }
+    }, {
+        key: 'handleEASDKMessaging',
+        value: function handleEASDKMessaging() {
+            var _props = this.props,
+                open = _props.open,
+                easdk = _props.easdk;
+
+            if (easdk == null) {
+                return;
+            }
+            if (open) {
+                easdk.Modal.alert(this.props);
+            } else {
+                easdk.Modal.close();
+            }
+        }
+    }]);
+
+    return Alert;
+}(React.PureComponent);
+var Alert$2 = withEASDK()(Alert$1);
+
+var name = "@shopify/polaris";
+
+var version = "1.14.1";
+
+var METADATA = {
+    interface: {
+        name: name,
+        version: version
+    }
+};
+
+var App$1 = function (_React$Component) {
+    _inherits(App, _React$Component);
+
+    function App() {
+        _classCallCheck(this, App);
+
+        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+
+        _this.easdk = new EASDK$1({
+            apiKey: _this.props.apiKey,
+            shopOrigin: _this.props.shopOrigin,
+            forceRedirect: _this.props.forceRedirect,
+            debug: _this.props.debug
+        }, METADATA);
+        return _this;
+    }
+
+    _createClass(App, [{
+        key: 'getChildContext',
+        value: function getChildContext() {
+            return { easdk: this.easdk };
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return React.Children.only(this.props.children);
+        }
+    }]);
+
+    return App;
+}(React.Component);
+
+App$1.childContextTypes = { easdk: PropTypes.instanceOf(EASDK$1) };
+
+var Modal$3 = function (_React$PureComponent) {
+    _inherits(Modal, _React$PureComponent);
+
+    function Modal() {
+        _classCallCheck(this, Modal);
+
+        var _this = _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).apply(this, arguments));
+
+        _this.focusReturnPoint = null;
+        return _this;
+    }
+
+    _createClass(Modal, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var open = this.props.open;
+
+            if (open) {
+                this.handleEASDKMessaging();
+                this.focusReturnPoint = document.activeElement;
+            }
+        }
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate(_ref) {
+            var wasOpen = _ref.open;
+            var open = this.props.open;
+
+            if (wasOpen !== open) {
+                this.handleEASDKMessaging();
+            }
+            if (!wasOpen && open) {
+                this.focusReturnPoint = document.activeElement;
+            } else if (wasOpen && !open && this.focusReturnPoint != null && document.contains(this.focusReturnPoint)) {
+                this.focusReturnPoint.focus();
+                this.focusReturnPoint = null;
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return null;
+        }
+    }, {
+        key: 'handleEASDKMessaging',
+        value: function handleEASDKMessaging() {
+            var _props = this.props,
+                open = _props.open,
+                easdk = _props.easdk;
+
+            if (easdk == null) {
+                return;
+            }
+            if (open) {
+                easdk.Modal.open(this.props);
+            } else {
+                easdk.Modal.close();
+            }
+        }
+    }]);
+
+    return Modal;
+}(React.PureComponent);
+var Modal$4 = withEASDK()(Modal$3);
+
+var ResourcePicker$2 = function (_React$PureComponent) {
+    _inherits(ResourcePicker, _React$PureComponent);
+
+    function ResourcePicker() {
+        _classCallCheck(this, ResourcePicker);
+
+        var _this = _possibleConstructorReturn(this, (ResourcePicker.__proto__ || Object.getPrototypeOf(ResourcePicker)).apply(this, arguments));
+
+        _this.focusReturnPoint = null;
+        return _this;
+    }
+
+    _createClass(ResourcePicker, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var open = this.props.open;
+
+            if (open) {
+                this.handleEASDKMessaging();
+                this.focusReturnPoint = document.activeElement;
+            }
+        }
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate(_ref) {
+            var wasOpen = _ref.open;
+            var open = this.props.open;
+
+            if (wasOpen !== open) {
+                this.handleEASDKMessaging();
+            }
+            if (!wasOpen && open) {
+                this.focusReturnPoint = document.activeElement;
+            } else if (wasOpen && !open && this.focusReturnPoint != null && document.contains(this.focusReturnPoint)) {
+                this.focusReturnPoint.focus();
+                this.focusReturnPoint = null;
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return null;
+        }
+    }, {
+        key: 'handleEASDKMessaging',
+        value: function handleEASDKMessaging() {
+            var _props = this.props,
+                open = _props.open,
+                easdk = _props.easdk;
+
+            if (easdk == null) {
+                return;
+            }
+            if (open) {
+                easdk.ResourcePicker.open(this.props);
+            } else {
+                easdk.ResourcePicker.close();
+            }
+        }
+    }]);
+
+    return ResourcePicker;
+}(React.PureComponent);
+var Modal$6 = withEASDK()(ResourcePicker$2);
+
+exports.Alert = Alert$2;
+exports.EmbeddedApp = App$1;
+exports.Modal = Modal$4;
+exports.ResourcePicker = Modal$6;
+exports.EASDK = EASDK$1;
+exports.withEASDK = withEASDK;
+
+
+/***/ }),
+/* 481 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright 2015, Yahoo! Inc.
+ * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
+ */
+(function (global, factory) {
+     true ? module.exports = factory() :
+    typeof define === 'function' && define.amd ? define(factory) :
+    (global.hoistNonReactStatics = factory());
+}(this, (function () {
+    'use strict';
+    
+    var REACT_STATICS = {
+        childContextTypes: true,
+        contextTypes: true,
+        defaultProps: true,
+        displayName: true,
+        getDefaultProps: true,
+        getDerivedStateFromProps: true,
+        mixins: true,
+        propTypes: true,
+        type: true
+    };
+    
+    var KNOWN_STATICS = {
+        name: true,
+        length: true,
+        prototype: true,
+        caller: true,
+        callee: true,
+        arguments: true,
+        arity: true
+    };
+    
+    var defineProperty = Object.defineProperty;
+    var getOwnPropertyNames = Object.getOwnPropertyNames;
+    var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+    var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+    var getPrototypeOf = Object.getPrototypeOf;
+    var objectPrototype = getPrototypeOf && getPrototypeOf(Object);
+    
+    return function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
+        if (typeof sourceComponent !== 'string') { // don't hoist over string (html) components
+            
+            if (objectPrototype) {
+                var inheritedComponent = getPrototypeOf(sourceComponent);
+                if (inheritedComponent && inheritedComponent !== objectPrototype) {
+                    hoistNonReactStatics(targetComponent, inheritedComponent, blacklist);
+                }
+            }
+            
+            var keys = getOwnPropertyNames(sourceComponent);
+            
+            if (getOwnPropertySymbols) {
+                keys = keys.concat(getOwnPropertySymbols(sourceComponent));
+            }
+            
+            for (var i = 0; i < keys.length; ++i) {
+                var key = keys[i];
+                if (!REACT_STATICS[key] && !KNOWN_STATICS[key] && (!blacklist || !blacklist[key])) {
+                    var descriptor = getOwnPropertyDescriptor(sourceComponent, key);
+                    try { // Avoid failures from read-only properties
+                        defineProperty(targetComponent, key, descriptor);
+                    } catch (e) {}
+                }
+            }
+            
+            return targetComponent;
+        }
+        
+        return targetComponent;
+    };
+})));
+
+
+/***/ }),
+/* 482 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(242);
+__webpack_require__(232);
+__webpack_require__(483);
+module.exports = __webpack_require__(14).WeakMap;
+
+
+/***/ }),
+/* 483 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var each = __webpack_require__(475)(0);
+var redefine = __webpack_require__(114);
+var meta = __webpack_require__(238);
+var assign = __webpack_require__(486);
+var weak = __webpack_require__(487);
+var isObject = __webpack_require__(26);
+var fails = __webpack_require__(42);
+var validate = __webpack_require__(479);
+var WEAK_MAP = 'WeakMap';
+var getWeak = meta.getWeak;
+var isExtensible = Object.isExtensible;
+var uncaughtFrozenStore = weak.ufstore;
+var tmp = {};
+var InternalMap;
+
+var wrapper = function (get) {
+  return function WeakMap() {
+    return get(this, arguments.length > 0 ? arguments[0] : undefined);
+  };
+};
+
+var methods = {
+  // 23.3.3.3 WeakMap.prototype.get(key)
+  get: function get(key) {
+    if (isObject(key)) {
+      var data = getWeak(key);
+      if (data === true) return uncaughtFrozenStore(validate(this, WEAK_MAP)).get(key);
+      return data ? data[this._i] : undefined;
+    }
+  },
+  // 23.3.3.5 WeakMap.prototype.set(key, value)
+  set: function set(key, value) {
+    return weak.def(validate(this, WEAK_MAP), key, value);
+  }
+};
+
+// 23.3 WeakMap Objects
+var $WeakMap = module.exports = __webpack_require__(488)(WEAK_MAP, wrapper, methods, weak, true, true);
+
+// IE11 WeakMap frozen keys fix
+if (fails(function () { return new $WeakMap().set((Object.freeze || Object)(tmp), 7).get(tmp) != 7; })) {
+  InternalMap = weak.getConstructor(wrapper, WEAK_MAP);
+  assign(InternalMap.prototype, methods);
+  meta.NEED = true;
+  each(['delete', 'has', 'get', 'set'], function (key) {
+    var proto = $WeakMap.prototype;
+    var method = proto[key];
+    redefine(proto, key, function (a, b) {
+      // store frozen objects on internal weakmap shim
+      if (isObject(a) && !isExtensible(a)) {
+        if (!this._f) this._f = new InternalMap();
+        var result = this._f[key](a, b);
+        return key == 'set' ? this : result;
+      // store all the rest on native weakmap
+      } return method.call(this, a, b);
+    });
+  });
+}
+
+
+/***/ }),
+/* 484 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 9.4.2.3 ArraySpeciesCreate(originalArray, length)
+var speciesConstructor = __webpack_require__(485);
+
+module.exports = function (original, length) {
+  return new (speciesConstructor(original))(length);
+};
+
+
+/***/ }),
+/* 485 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__(26);
+var isArray = __webpack_require__(240);
+var SPECIES = __webpack_require__(10)('species');
+
+module.exports = function (original) {
+  var C;
+  if (isArray(original)) {
+    C = original.constructor;
+    // cross-realm fallback
+    if (typeof C == 'function' && (C === Array || isArray(C.prototype))) C = undefined;
+    if (isObject(C)) {
+      C = C[SPECIES];
+      if (C === null) C = undefined;
+    }
+  } return C === undefined ? Array : C;
+};
+
+
+/***/ }),
+/* 486 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// 19.1.2.1 Object.assign(target, source, ...)
+var getKeys = __webpack_require__(66);
+var gOPS = __webpack_require__(118);
+var pIE = __webpack_require__(74);
+var toObject = __webpack_require__(117);
+var IObject = __webpack_require__(226);
+var $assign = Object.assign;
+
+// should work with symbols and should have deterministic property order (V8 bug)
+module.exports = !$assign || __webpack_require__(42)(function () {
+  var A = {};
+  var B = {};
+  // eslint-disable-next-line no-undef
+  var S = Symbol();
+  var K = 'abcdefghijklmnopqrst';
+  A[S] = 7;
+  K.split('').forEach(function (k) { B[k] = k; });
+  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
+}) ? function assign(target, source) { // eslint-disable-line no-unused-vars
+  var T = toObject(target);
+  var aLen = arguments.length;
+  var index = 1;
+  var getSymbols = gOPS.f;
+  var isEnum = pIE.f;
+  while (aLen > index) {
+    var S = IObject(arguments[index++]);
+    var keys = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S);
+    var length = keys.length;
+    var j = 0;
+    var key;
+    while (length > j) if (isEnum.call(S, key = keys[j++])) T[key] = S[key];
+  } return T;
+} : $assign;
+
+
+/***/ }),
+/* 487 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var redefineAll = __webpack_require__(476);
+var getWeak = __webpack_require__(238).getWeak;
+var anObject = __webpack_require__(25);
+var isObject = __webpack_require__(26);
+var anInstance = __webpack_require__(477);
+var forOf = __webpack_require__(478);
+var createArrayMethod = __webpack_require__(475);
+var $has = __webpack_require__(19);
+var validate = __webpack_require__(479);
+var arrayFind = createArrayMethod(5);
+var arrayFindIndex = createArrayMethod(6);
+var id = 0;
+
+// fallback for uncaught frozen keys
+var uncaughtFrozenStore = function (that) {
+  return that._l || (that._l = new UncaughtFrozenStore());
+};
+var UncaughtFrozenStore = function () {
+  this.a = [];
+};
+var findUncaughtFrozen = function (store, key) {
+  return arrayFind(store.a, function (it) {
+    return it[0] === key;
+  });
+};
+UncaughtFrozenStore.prototype = {
+  get: function (key) {
+    var entry = findUncaughtFrozen(this, key);
+    if (entry) return entry[1];
+  },
+  has: function (key) {
+    return !!findUncaughtFrozen(this, key);
+  },
+  set: function (key, value) {
+    var entry = findUncaughtFrozen(this, key);
+    if (entry) entry[1] = value;
+    else this.a.push([key, value]);
+  },
+  'delete': function (key) {
+    var index = arrayFindIndex(this.a, function (it) {
+      return it[0] === key;
+    });
+    if (~index) this.a.splice(index, 1);
+    return !!~index;
+  }
+};
+
+module.exports = {
+  getConstructor: function (wrapper, NAME, IS_MAP, ADDER) {
+    var C = wrapper(function (that, iterable) {
+      anInstance(that, C, NAME, '_i');
+      that._t = NAME;      // collection type
+      that._i = id++;      // collection id
+      that._l = undefined; // leak store for uncaught frozen objects
+      if (iterable != undefined) forOf(iterable, IS_MAP, that[ADDER], that);
+    });
+    redefineAll(C.prototype, {
+      // 23.3.3.2 WeakMap.prototype.delete(key)
+      // 23.4.3.3 WeakSet.prototype.delete(value)
+      'delete': function (key) {
+        if (!isObject(key)) return false;
+        var data = getWeak(key);
+        if (data === true) return uncaughtFrozenStore(validate(this, NAME))['delete'](key);
+        return data && $has(data, this._i) && delete data[this._i];
+      },
+      // 23.3.3.4 WeakMap.prototype.has(key)
+      // 23.4.3.4 WeakSet.prototype.has(value)
+      has: function has(key) {
+        if (!isObject(key)) return false;
+        var data = getWeak(key);
+        if (data === true) return uncaughtFrozenStore(validate(this, NAME)).has(key);
+        return data && $has(data, this._i);
+      }
+    });
+    return C;
+  },
+  def: function (that, key, value) {
+    var data = getWeak(anObject(key), true);
+    if (data === true) uncaughtFrozenStore(that).set(key, value);
+    else data[that._i] = value;
+    return that;
+  },
+  ufstore: uncaughtFrozenStore
+};
+
+
+/***/ }),
+/* 488 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var global = __webpack_require__(13);
+var $export = __webpack_require__(23);
+var meta = __webpack_require__(238);
+var fails = __webpack_require__(42);
+var hide = __webpack_require__(24);
+var redefineAll = __webpack_require__(476);
+var forOf = __webpack_require__(478);
+var anInstance = __webpack_require__(477);
+var isObject = __webpack_require__(26);
+var setToStringTag = __webpack_require__(71);
+var dP = __webpack_require__(15).f;
+var each = __webpack_require__(475)(0);
+var DESCRIPTORS = __webpack_require__(18);
+
+module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
+  var Base = global[NAME];
+  var C = Base;
+  var ADDER = IS_MAP ? 'set' : 'add';
+  var proto = C && C.prototype;
+  var O = {};
+  if (!DESCRIPTORS || typeof C != 'function' || !(IS_WEAK || proto.forEach && !fails(function () {
+    new C().entries().next();
+  }))) {
+    // create collection constructor
+    C = common.getConstructor(wrapper, NAME, IS_MAP, ADDER);
+    redefineAll(C.prototype, methods);
+    meta.NEED = true;
+  } else {
+    C = wrapper(function (target, iterable) {
+      anInstance(target, C, NAME, '_c');
+      target._c = new Base();
+      if (iterable != undefined) forOf(iterable, IS_MAP, target[ADDER], target);
+    });
+    each('add,clear,delete,forEach,get,has,set,keys,values,entries,toJSON'.split(','), function (KEY) {
+      var IS_ADDER = KEY == 'add' || KEY == 'set';
+      if (KEY in proto && !(IS_WEAK && KEY == 'clear')) hide(C.prototype, KEY, function (a, b) {
+        anInstance(this, C, KEY);
+        if (!IS_ADDER && IS_WEAK && !isObject(a)) return KEY == 'get' ? undefined : false;
+        var result = this._c[KEY](a === 0 ? 0 : a, b);
+        return IS_ADDER ? this : result;
+      });
+    });
+    IS_WEAK || dP(C.prototype, 'size', {
+      get: function () {
+        return this._c.size;
+      }
+    });
+  }
+
+  setToStringTag(C, NAME);
+
+  O[NAME] = C;
+  $export($export.G + $export.W + $export.F, O);
+
+  if (!IS_WEAK) common.setStrong(C, NAME, IS_MAP);
+
+  return C;
+};
+
 
 /***/ })
 /******/ ]);

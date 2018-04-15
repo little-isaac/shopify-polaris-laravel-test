@@ -77238,11 +77238,10 @@ var Dashboard = function (_React$Component) {
     return Dashboard;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["a"] = (Dashboard);
-
 Dashboard.contextTypes = {
     easdk: __WEBPACK_IMPORTED_MODULE_3_prop_types__["object"]
 };
+/* harmony default export */ __webpack_exports__["a"] = (Dashboard);
 
 /***/ }),
 /* 468 */

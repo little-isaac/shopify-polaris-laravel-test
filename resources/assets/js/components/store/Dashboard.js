@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 import {Page, Card, Button, List, CalloutCard} from '@shopify/polaris';
 import * as PropTypes from 'prop-types';
 
-export default class Dashboard extends React.Component {
+class Dashboard extends React.Component {
     constructor(props) {
         super(props);
 
@@ -24,4 +24,4 @@ export default class Dashboard extends React.Component {
 Dashboard.contextTypes={
     easdk: PropTypes.object
 };
-    
+export default Dashboard;    

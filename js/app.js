@@ -60766,12 +60766,12 @@ var Login = function (_React$Component) {
                 'div',
                 { className: 'mt-5 mx-auto' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2__shopify_polaris__["c" /* Card */],
+                    __WEBPACK_IMPORTED_MODULE_2__shopify_polaris__["b" /* Card */],
                     { title: 'Login', subdued: true, sectioned: true },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__shopify_polaris__["d" /* TextField */], { label: 'Store Url', error: this.state.store_name_error, value: this.state.store_name, onChange: this.handleStoreNameChange, type: 'text', helpText: 'ex. store.myshopify.com' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__shopify_polaris__["c" /* TextField */], { label: 'Store Url', error: this.state.store_name_error, value: this.state.store_name, onChange: this.handleStoreNameChange, type: 'text', helpText: 'ex. store.myshopify.com' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
@@ -60821,9 +60821,9 @@ exports.Response = window.Response;
 /* unused harmony export buttonFrom */
 /* unused harmony export buttonsFrom */
 /* unused harmony export ButtonGroup */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return CalloutCard$1; });
+/* unused harmony export CalloutCard */
 /* unused harmony export Caption */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return Card$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Card$1; });
 /* unused harmony export Checkbox */
 /* unused harmony export ChoiceList */
 /* unused harmony export Collapsible */
@@ -60868,7 +60868,7 @@ exports.Response = window.Response;
 /* unused harmony export Tabs */
 /* unused harmony export Tag */
 /* unused harmony export TextContainer */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return TextField$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return TextField$1; });
 /* unused harmony export TextStyle */
 /* unused harmony export Thumbnail */
 /* unused harmony export Tooltip */
@@ -77221,16 +77221,9 @@ var Dashboard = function (_React$Component) {
         value: function render() {
             /* Some css code has been removed for brevity */
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_2__shopify_polaris__["b" /* CalloutCard */],
-                {
-                    title: 'Customize the style of your checkout',
-                    illustration: 'https://cdn.shopify.com/s/assets/admin/checkout/settings-customizecart-705f57c725ac05be5a34ec20c05b94298cb8afd10aac7bd9c7ad02030f48cfa0.svg'
-                },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'p',
-                    null,
-                    'Upload your store\u2019s logo, change colors and fonts, and more.'
-                )
+                __WEBPACK_IMPORTED_MODULE_2__shopify_polaris__["a" /* Button */],
+                null,
+                'Add product'
             );
         }
     }]);

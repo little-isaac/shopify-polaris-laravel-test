@@ -20,7 +20,7 @@ class Dashboard extends React.Component {
                 </CalloutCard>
                 );
     }
-}
+};
 Dashboard.contextTypes={
     easdk: PropTypes.object
 };

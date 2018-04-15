@@ -64,8 +64,6 @@
     <body>
         <div class="container-fluid  h-100">
             <div class="row h-100">
-                @include('snippets.topbar')
-                @include('snippets.sidebar')
                 <main class="col bg-faded py-3">
                     <div id="@yield('main_content_id','login')">
                         <div class="loading">

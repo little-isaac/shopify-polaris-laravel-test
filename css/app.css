@@ -10388,3 +10388,14 @@ a.text-dark:focus {
   }
 }
 
+#login {
+  width: 500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  #login {
+    width: auto;
+  }
+}
+

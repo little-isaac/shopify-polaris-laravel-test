@@ -10,10 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('', function () {
-    return view('welcome');
+Route::group(['namespace' => 'User'], function () {
+    Route::get('/', 'LoginController@direct_login');
+    Route::get('/login', 'LoginController@view_login');
+    Route::get('logout', 'LoginController@logout');
+    Route::get('login/shopify', 'LoginController@redirectToProvider')->name('login_shopify');
+    Route::get('login/shopify/auth/callback', 'LoginController@handleProviderCallback');
+    Route::get('dashboard', 'DashboardController@view');
 });

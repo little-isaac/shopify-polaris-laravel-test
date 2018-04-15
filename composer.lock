@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5bca48e56bbf3a25645858fcab9c285",
+    "content-hash": "197e12b44adc7109f7001beda425ad74",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -738,6 +738,39 @@
                 "storage"
             ],
             "time": "2018-04-06T09:58:14+00:00"
+        },
+        {
+            "name": "milind/objects",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/little-isaac/shopify.git",
+                "reference": "6b8f5682cc409c9db44a5ca7db82f2d58ddb7e40"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/little-isaac/shopify/zipball/6b8f5682cc409c9db44a5ca7db82f2d58ddb7e40",
+                "reference": "6b8f5682cc409c9db44a5ca7db82f2d58ddb7e40",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Shopify\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "milind",
+                    "email": "milind@Milind-pc.mshome.net"
+                }
+            ],
+            "description": "Shopify objects to communicate with API",
+            "time": "2018-01-10T12:09:33+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3968,7 +4001,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "milind/objects": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

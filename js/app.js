@@ -78650,7 +78650,7 @@ if (document.getElementById('root')) {
     __WEBPACK_IMPORTED_MODULE_4__shopify_polaris_embedded__["EmbeddedApp"],
     {
       apiKey: api_key,
-      shopOrigin: shop_name
+      shopOrigin: 'https://{shop_name}/'
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Dashboard, null)
   ), document.querySelector('#root'));

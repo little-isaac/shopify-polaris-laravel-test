@@ -18,6 +18,17 @@ class Dashboard extends React.Component {
         this.handleChangeToCompare = this.handleChangeToCompare.bind(this);
         this.handleChangeWithCompare = this.handleChangeWithCompare.bind(this);
 }
+getThemes(){
+    fetch("get_themes",{
+        method:"get"
+    }).then(res => {
+  return res.json() // download the body as JSON
+}).then(res => {
+         debugger;
+         this.themes = res.themes;
+     }
+                    );
+}
 handleChangeToCompare(newValue) {
     this.setState({selectedToCompare: newValue});
   }
@@ -49,7 +60,6 @@ handleChangeWithCompare(newValue) {
                 onChange={this.handleChangeWithCompare}
                 value={this.state.selectedWithCompare}
               />
-            <TextField type="number" label="Maximum order" />
         </FormLayout.Group>
       </FormLayout>
     </Card>

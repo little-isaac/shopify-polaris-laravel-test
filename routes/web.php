@@ -17,4 +17,5 @@ Route::group(['namespace' => 'User'], function () {
     Route::get('login/shopify', 'LoginController@redirectToProvider')->name('login_shopify');
     Route::get('login/shopify/auth/callback', 'LoginController@handleProviderCallback');
     Route::get('dashboard', 'DashboardController@view');
+    Route::get('get_themes','ThemesController@get_themes');
 });

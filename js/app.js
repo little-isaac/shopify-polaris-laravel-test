@@ -78628,6 +78628,20 @@ var Dashboard = function (_React$Component) {
   }
 
   _createClass(Dashboard, [{
+    key: 'getThemes',
+    value: function getThemes() {
+      var _this2 = this;
+
+      fetch("get_themes", {
+        method: "get"
+      }).then(function (res) {
+        return res.json(); // download the body as JSON
+      }).then(function (res) {
+        debugger;
+        _this2.themes = res.themes;
+      });
+    }
+  }, {
     key: 'handleChangeToCompare',
     value: function handleChangeToCompare(newValue) {
       this.setState({ selectedToCompare: newValue });
@@ -78674,8 +78688,7 @@ var Dashboard = function (_React$Component) {
                     options: this.themes,
                     onChange: this.handleChangeWithCompare,
                     value: this.state.selectedWithCompare
-                  }),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["g" /* TextField */], { type: 'number', label: 'Maximum order' })
+                  })
                 )
               )
             )

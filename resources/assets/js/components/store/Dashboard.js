@@ -21,6 +21,7 @@ class Dashboard extends React.Component {
         this.getThemes();
 }
 getThemes(){
+    debugger;
     this.context.easdk.startLoading();
     fetch("get_themes",{
         method:"get"

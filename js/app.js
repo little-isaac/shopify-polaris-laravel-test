@@ -78634,6 +78634,7 @@ var Dashboard = function (_React$Component) {
     value: function getThemes() {
       var _this2 = this;
 
+      debugger;
       this.context.easdk.startLoading();
       fetch("get_themes", {
         method: "get"

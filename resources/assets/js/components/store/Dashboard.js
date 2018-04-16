@@ -11,9 +11,6 @@ class Dashboard extends React.Component {
   render() {
     return (
       <Page
-  breadcrumbs={[
-    {content: 'Apps'}
-  ]}
   title="Themes"
   primaryAction={{content: 'Save', disabled: true}}
 >

@@ -28,8 +28,8 @@ Dashboard.contextTypes = {
 if (document.getElementById('root')) {
 render(
   <EmbeddedApp
-    apiKey={ widnow.api_key }
-    shopOrigin={ widnow.shop_name }
+    apiKey={ window.api_key }
+    shopOrigin={ window.shop_name }
   >
     <Dashboard />
   </EmbeddedApp>,

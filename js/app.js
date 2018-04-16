@@ -78634,12 +78634,14 @@ var Dashboard = function (_React$Component) {
     value: function getThemes() {
       var _this2 = this;
 
+      this.context.easdk.startLoading();
       fetch("get_themes", {
         method: "get"
       }).then(function (res) {
         return res.json(); // download the body as JSON
       }).then(function (res) {
         debugger;
+        _this2.context.easdk.stopLoading();
         _this2.themes = res.themes;
       });
     }

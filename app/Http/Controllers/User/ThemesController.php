@@ -10,7 +10,7 @@ use Auth;
 class ThemesController extends Controller
 {
     function get_themes(Request $request){
-        return [Auth::User()];
+        return [Auth::user()];
         $theme = new Theme(Auth::User()->shop_name,Auth::User()->shopify_token);
         
         $themes = $theme->all();

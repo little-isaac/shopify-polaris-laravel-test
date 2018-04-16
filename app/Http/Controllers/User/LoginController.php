@@ -65,6 +65,7 @@ class LoginController extends Controller {
 
             $authUser = $this->findOrCreateUser($socialite_user, $provider, $user, $access_token);
             Auth::login($authUser, true);
+            
 //        $this->createTables(Auth::user()->id);
             if ($authUser->is_paid && !$authUser->is_uninstall) {
 

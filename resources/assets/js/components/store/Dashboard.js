@@ -11,7 +11,15 @@ class Dashboard extends React.Component {
   render() {
     return (
       <Page
+ breadcrumbs={[
+    {content: 'Apps'}
+  ]}
   title="Themes"
+  primaryAction={{content: 'Save', disabled: true}}
+  pagination={{
+    hasPrevious: true,
+    hasNext: true,
+  }}
 >
   <p>Page content</p>
 </Page>

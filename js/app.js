@@ -78626,18 +78626,32 @@ var Dashboard = function (_React$Component) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         __WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["c" /* Page */],
         {
-          breadcrumbs: [{ content: 'Apps' }],
-          title: 'Themes',
-          primaryAction: { content: 'Save', disabled: true },
-          pagination: {
-            hasPrevious: true,
-            hasNext: true
-          }
+          title: 'Themes'
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'p',
+          Layout,
           null,
-          'Page content'
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            Layout.AnnotatedSection,
+            {
+              title: 'Store details',
+              description: 'Shopify and your customers will use this information to contact you.' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["b" /* Card */],
+              { sectioned: true },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                FormLayout,
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(TextField, {
+                  label: 'Store name'
+                }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(TextField, {
+                  type: 'email',
+                  label: 'Account email'
+                })
+              )
+            )
+          )
         )
       );
     }

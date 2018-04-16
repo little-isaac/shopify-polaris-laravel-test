@@ -78651,12 +78651,12 @@ Dashboard.contextTypes = {
 };
 if (document.getElementById('root')) {
   var api_key = window.api_key;
-  var shop_name = window.shop_name;
+  var shop_name = "https://" + window.shop_name + "/";
   Object(__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"])(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     __WEBPACK_IMPORTED_MODULE_4__shopify_polaris_embedded__["EmbeddedApp"],
     {
       apiKey: api_key,
-      shopOrigin: 'https://{ shop_name }/'
+      shopOrigin: shop_name
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Dashboard, null)
   ), document.querySelector('#root'));

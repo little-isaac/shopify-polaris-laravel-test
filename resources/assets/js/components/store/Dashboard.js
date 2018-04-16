@@ -31,11 +31,11 @@ Dashboard.contextTypes = {
   };
 if (document.getElementById('root')) {
     var api_key = window.api_key;
-    var shop_name = window.shop_name;
+    var shop_name = "https://"+window.shop_name+"/";
 render(
   <EmbeddedApp
     apiKey={api_key}
-    shopOrigin="https://{ shop_name }/"
+    shopOrigin={shop_name}
   >
     <Dashboard />
   </EmbeddedApp>,

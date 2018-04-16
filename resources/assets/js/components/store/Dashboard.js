@@ -35,7 +35,7 @@ if (document.getElementById('root')) {
 render(
   <EmbeddedApp
     apiKey={api_key}
-    shopOrigin="https://{shop_name}/"
+    shopOrigin="https://{ shop_name }/"
   >
     <Dashboard />
   </EmbeddedApp>,

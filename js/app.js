@@ -70414,7 +70414,7 @@ var Login = function (_React$Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__shopify_polaris__["d" /* TextField */], { label: 'Store Url', error: this.state.store_name_error, value: this.state.store_name, onChange: this.handleStoreNameChange, type: 'text', helpText: 'ex. store.myshopify.com' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__shopify_polaris__["f" /* TextField */], { label: 'Store Url', error: this.state.store_name_error, value: this.state.store_name, onChange: this.handleStoreNameChange, type: 'text', helpText: 'ex. store.myshopify.com' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
@@ -70484,7 +70484,7 @@ exports.Response = window.Response;
 /* unused harmony export EmptyState */
 /* unused harmony export EventListener */
 /* unused harmony export FooterHelp */
-/* unused harmony export FormLayout */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return FormLayout$1; });
 /* unused harmony export Heading */
 /* unused harmony export Icon */
 /* unused harmony export Image */
@@ -70492,10 +70492,10 @@ exports.Response = window.Response;
 /* unused harmony export KeypressListener */
 /* unused harmony export Label */
 /* unused harmony export Labelled */
-/* unused harmony export Layout */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Layout$1; });
 /* unused harmony export Link */
 /* unused harmony export List */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return Page$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return Page$1; });
 /* unused harmony export PageActions */
 /* unused harmony export Pagination */
 /* unused harmony export Popover */
@@ -70511,7 +70511,7 @@ exports.Response = window.Response;
 /* unused harmony export Tabs */
 /* unused harmony export Tag */
 /* unused harmony export TextContainer */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return TextField$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return TextField$1; });
 /* unused harmony export TextStyle */
 /* unused harmony export Thumbnail */
 /* unused harmony export Tooltip */
@@ -78624,15 +78624,15 @@ var Dashboard = function (_React$Component) {
 
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["c" /* Page */],
+        __WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["e" /* Page */],
         {
           title: 'Themes'
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          Layout,
+          __WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["d" /* Layout */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            Layout.AnnotatedSection,
+            __WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["d" /* Layout */].AnnotatedSection,
             {
               title: 'Store details',
               description: 'Shopify and your customers will use this information to contact you.' },
@@ -78640,12 +78640,12 @@ var Dashboard = function (_React$Component) {
               __WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["b" /* Card */],
               { sectioned: true },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                FormLayout,
+                __WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["c" /* FormLayout */],
                 null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(TextField, {
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["f" /* TextField */], {
                   label: 'Store name'
                 }),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(TextField, {
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["f" /* TextField */], {
                   type: 'email',
                   label: 'Account email'
                 })

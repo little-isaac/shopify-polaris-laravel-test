@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import * as PropTypes from 'prop-types';
-import {Page, Card, Button} from '@shopify/polaris';
+import {Page, Card, Button, Layout, FormLayout, TextField} from '@shopify/polaris';
 import {EmbeddedApp} from '@shopify/polaris/embedded';
 
 class Dashboard extends React.Component {

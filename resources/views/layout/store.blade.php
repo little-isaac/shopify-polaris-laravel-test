@@ -69,6 +69,6 @@
                 </div>
             </div>
         </div>
-        <script src="{{ secure_asset('js/app.js') }}?t={{ time() }}" ></script>
+        <script src="{{ secure_asset('js/app.js') }}" ></script>
     </body>
 </html>

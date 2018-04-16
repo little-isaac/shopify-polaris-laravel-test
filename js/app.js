@@ -78624,14 +78624,13 @@ var Dashboard = function (_React$Component) {
     _this.themes = [];
     _this.handleChangeToCompare = _this.handleChangeToCompare.bind(_this);
     _this.handleChangeWithCompare = _this.handleChangeWithCompare.bind(_this);
-    _this.getThemes = _this.getThemes.bind(_this);
-    _this.getThemes();
+
     return _this;
   }
 
   _createClass(Dashboard, [{
-    key: 'getThemes',
-    value: function getThemes() {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
       var _this2 = this;
 
       debugger;

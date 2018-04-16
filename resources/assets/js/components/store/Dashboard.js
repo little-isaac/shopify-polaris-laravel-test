@@ -17,10 +17,9 @@ class Dashboard extends React.Component {
         this.themes = [];
         this.handleChangeToCompare = this.handleChangeToCompare.bind(this);
         this.handleChangeWithCompare = this.handleChangeWithCompare.bind(this);
-        this.getThemes = this.getThemes.bind(this);
-        this.getThemes();
+        
 }
-getThemes(){
+componentDidMount(){
     debugger;
     this.context.easdk.startLoading();
     fetch("get_themes",{

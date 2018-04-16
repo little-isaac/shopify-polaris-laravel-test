@@ -70414,7 +70414,7 @@ var Login = function (_React$Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__shopify_polaris__["f" /* TextField */], { label: 'Store Url', error: this.state.store_name_error, value: this.state.store_name, onChange: this.handleStoreNameChange, type: 'text', helpText: 'ex. store.myshopify.com' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__shopify_polaris__["g" /* TextField */], { label: 'Store Url', error: this.state.store_name_error, value: this.state.store_name, onChange: this.handleStoreNameChange, type: 'text', helpText: 'ex. store.myshopify.com' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
@@ -70503,7 +70503,7 @@ exports.Response = window.Response;
 /* unused harmony export RadioButton */
 /* unused harmony export ResourceList */
 /* unused harmony export Scrollable */
-/* unused harmony export Select */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return Select$1; });
 /* unused harmony export SettingToggle */
 /* unused harmony export Spinner */
 /* unused harmony export Stack */
@@ -70511,7 +70511,7 @@ exports.Response = window.Response;
 /* unused harmony export Tabs */
 /* unused harmony export Tag */
 /* unused harmony export TextContainer */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return TextField$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return TextField$1; });
 /* unused harmony export TextStyle */
 /* unused harmony export Thumbnail */
 /* unused harmony export Tooltip */
@@ -78663,19 +78663,19 @@ var Dashboard = function (_React$Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   __WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["c" /* FormLayout */].Group,
                   null,
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Select, {
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["f" /* Select */], {
                     label: 'To compare',
                     options: this.themes,
                     onChange: this.handleChangeToCompare,
                     value: this.state.selectedToCompare
                   }),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Select, {
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["f" /* Select */], {
                     label: 'With Compare',
                     options: this.themes,
                     onChange: this.handleChangeWithCompare,
                     value: this.state.selectedWithCompare
                   }),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["f" /* TextField */], { type: 'number', label: 'Maximum order' })
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["g" /* TextField */], { type: 'number', label: 'Maximum order' })
                 )
               )
             )

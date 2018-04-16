@@ -78623,28 +78623,17 @@ var Dashboard = function (_React$Component) {
     // object to `this.context` within your component.
 
     value: function render() {
-      var _this2 = this;
-
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         __WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["c" /* Page */],
-        { title: 'Example application' },
+        {
+          breadcrumbs: [{ content: 'Apps' }],
+          title: 'Themes',
+          primaryAction: { content: 'Save', disabled: true }
+        },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["b" /* Card */],
-          { sectioned: true },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["a" /* Button */],
-            { onClick: function onClick() {
-                return _this2.context.easdk.startLoading();
-              } },
-            'Start loading'
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["a" /* Button */],
-            { onClick: function onClick() {
-                return _this2.context.easdk.stopLoading();
-              } },
-            'Stop loading'
-          )
+          'p',
+          null,
+          'Page content'
         )
       );
     }
@@ -78656,15 +78645,15 @@ var Dashboard = function (_React$Component) {
 Dashboard.contextTypes = {
   easdk: __WEBPACK_IMPORTED_MODULE_2_prop_types__["object"]
 };
-if (document.getElementById('dashboard')) {
+if (document.getElementById('root')) {
   Object(__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"])(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     __WEBPACK_IMPORTED_MODULE_4__shopify_polaris_embedded__["EmbeddedApp"],
     {
-      apiKey: 'd5d77a79f3bda1bd18844814af04e672',
-      shopOrigin: 'https://em-sc-2.myshopify.com'
+      apiKey: widnow.api_key,
+      shopOrigin: widnow.shop_name
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Dashboard, null)
-  ), document.querySelector('#dashboard'));
+  ), document.querySelector('#root'));
 }
 
 /***/ }),

@@ -69,6 +69,7 @@
                 </div>
             </div>
         </div>
+        @yield('js')
         <script src="{{ secure_asset('js/app.js') }}" ></script>
     </body>
 </html>

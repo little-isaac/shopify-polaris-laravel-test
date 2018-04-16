@@ -10,30 +10,29 @@ class Dashboard extends React.Component {
   
   render() {
     return (
-      <Page title="Example application">
-        <Card sectioned>
-          <Button onClick={() => this.context.easdk.startLoading()}>
-            Start loading
-          </Button>
-          <Button onClick={() => this.context.easdk.stopLoading()}>
-            Stop loading
-          </Button>
-        </Card>
-      </Page>
+      <Page
+  breadcrumbs={[
+    {content: 'Apps'}
+  ]}
+  title="Themes"
+  primaryAction={{content: 'Save', disabled: true}}
+>
+  <p>Page content</p>
+</Page>
     );
   }
 }
 Dashboard.contextTypes = {
     easdk: PropTypes.object
   };
-if (document.getElementById('dashboard')) {
+if (document.getElementById('root')) {
 render(
   <EmbeddedApp
-    apiKey="d5d77a79f3bda1bd18844814af04e672"
-    shopOrigin="https://em-sc-2.myshopify.com"
+    apiKey={widnow.api_key}
+    shopOrigin={widnow.shop_name}
   >
     <Dashboard />
   </EmbeddedApp>,
-  document.querySelector('#dashboard')
+  document.querySelector('#root')
 );
 }

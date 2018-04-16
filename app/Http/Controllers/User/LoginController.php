@@ -81,7 +81,7 @@ class LoginController extends Controller {
 //            Utility::set_utilites('IS_FIRST_TIME_BILLING', 1, session('app_id'));
             return redirect('dashboard');
         } catch (\Exception $ex) {
-//            throw new \Exception($ex);
+            throw new \Exception($ex);
             return $this->redirect_shopify_login($request);
         }
     }

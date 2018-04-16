@@ -13,6 +13,7 @@ import '@shopify/polaris/styles.css';
 if (document.getElementById('login')) {
     ReactDOM.render(<Login />, document.getElementById('login'));
 }
+/*
 if (document.getElementById('dashboard')) {
     ReactDOM.render(
             <EmbeddedApp
@@ -23,3 +24,4 @@ if (document.getElementById('dashboard')) {
     </EmbeddedApp>, 
     document.getElementById('dashboard'));
 }
+*/

@@ -78656,15 +78656,16 @@ var Dashboard = function (_React$Component) {
 Dashboard.contextTypes = {
   easdk: __WEBPACK_IMPORTED_MODULE_2_prop_types__["object"]
 };
-
-Object(__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"])(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-  __WEBPACK_IMPORTED_MODULE_4__shopify_polaris_embedded__["EmbeddedApp"],
-  {
-    apiKey: 'd5d77a79f3bda1bd18844814af04e672',
-    shopOrigin: 'https://em-sc-2.myshopify.com'
-  },
-  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Dashboard, null)
-), document.querySelector('#dashboard'));
+if (document.getElementById('dashboard')) {
+  Object(__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"])(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_4__shopify_polaris_embedded__["EmbeddedApp"],
+    {
+      apiKey: 'd5d77a79f3bda1bd18844814af04e672',
+      shopOrigin: 'https://em-sc-2.myshopify.com'
+    },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Dashboard, null)
+  ), document.querySelector('#dashboard'));
+}
 
 /***/ }),
 /* 481 */

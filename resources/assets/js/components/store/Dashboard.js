@@ -26,7 +26,7 @@ class Dashboard extends React.Component {
 Dashboard.contextTypes = {
     easdk: PropTypes.object
   };
-
+if (document.getElementById('dashboard')) {
 render(
   <EmbeddedApp
     apiKey="d5d77a79f3bda1bd18844814af04e672"
@@ -36,3 +36,4 @@ render(
   </EmbeddedApp>,
   document.querySelector('#dashboard')
 );
+}

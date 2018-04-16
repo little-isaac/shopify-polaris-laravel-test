@@ -78644,11 +78644,13 @@ Dashboard.contextTypes = {
   easdk: __WEBPACK_IMPORTED_MODULE_2_prop_types__["object"]
 };
 if (document.getElementById('root')) {
+  var api_key = window.api_key;
+  var shop_name = window.shop_name;
   Object(__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"])(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     __WEBPACK_IMPORTED_MODULE_4__shopify_polaris_embedded__["EmbeddedApp"],
     {
-      apiKey: '{ window.api_key }',
-      shopOrigin: '{ window.shop_name }'
+      apiKey: api_key,
+      shopOrigin: shop_name
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Dashboard, null)
   ), document.querySelector('#root'));

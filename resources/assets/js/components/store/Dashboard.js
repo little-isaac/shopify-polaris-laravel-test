@@ -22,10 +22,12 @@ Dashboard.contextTypes = {
     easdk: PropTypes.object
   };
 if (document.getElementById('root')) {
+    var api_key = window.api_key;
+    var shop_name = window.shop_name;
 render(
   <EmbeddedApp
-    apiKey="{ window.api_key }"
-    shopOrigin="{ window.shop_name }"
+    apiKey={api_key}
+    shopOrigin={shop_name}
   >
     <Dashboard />
   </EmbeddedApp>,

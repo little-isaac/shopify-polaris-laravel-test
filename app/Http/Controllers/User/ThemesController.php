@@ -13,15 +13,15 @@ class ThemesController extends Controller
         $theme = new Theme(Auth::User()->shop_name,Auth::User()->shopify_token);
         
         $themes = $theme->all();
-        $themes = $themes->toArray();
+        $result_themes = [];
         foreach($themes as $index=>$theme_){
-            $themes[$index] = [
+            $result_themes[$index] = [
                 "label" => $theme_->name,
                 "value" => $theme_->id
             ];
         }
         return [
-            "themes" => $themes
+            "themes" => $result_themes
         ];
     }
     //

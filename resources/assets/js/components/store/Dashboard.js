@@ -12,7 +12,6 @@ class Dashboard extends React.Component {
     return (
       <Page
   title="Themes"
-  primaryAction={{content: 'Save', disabled: true}}
 >
   <p>Page content</p>
 </Page>

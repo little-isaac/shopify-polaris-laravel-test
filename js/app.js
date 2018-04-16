@@ -78610,19 +78610,37 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Dashboard = function (_React$Component) {
   _inherits(Dashboard, _React$Component);
 
-  function Dashboard() {
+  // This line is very important! It tells React to attach the `easdk`
+  // object to `this.context` within your component.
+  function Dashboard(props) {
     _classCallCheck(this, Dashboard);
 
-    return _possibleConstructorReturn(this, (Dashboard.__proto__ || Object.getPrototypeOf(Dashboard)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Dashboard.__proto__ || Object.getPrototypeOf(Dashboard)).call(this, props));
+
+    _this.state = {
+      selectedToCompare: null,
+      selectedWithCompare: null
+    };
+    _this.themes = [];
+    _this.handleChangeToCompare = _this.handleChangeToCompare.bind(_this);
+    _this.handleChangeWithCompare = _this.handleChangeWithCompare.bind(_this);
+    return _this;
   }
 
   _createClass(Dashboard, [{
+    key: 'handleChangeToCompare',
+    value: function handleChangeToCompare(newValue) {
+      this.setState({ selectedToCompare: newValue });
+    }
+  }, {
+    key: 'handleChangeWithCompare',
+    value: function handleChangeWithCompare(newValue) {
+      this.setState({ selectedWithCompare: newValue });
+    }
+  }, {
     key: 'render',
-
-    // This line is very important! It tells React to attach the `easdk`
-    // object to `this.context` within your component.
-
     value: function render() {
+
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         __WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["e" /* Page */],
         {
@@ -78642,13 +78660,23 @@ var Dashboard = function (_React$Component) {
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["c" /* FormLayout */],
                 null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["f" /* TextField */], {
-                  label: 'Store name'
-                }),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["f" /* TextField */], {
-                  type: 'email',
-                  label: 'Account email'
-                })
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  __WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["c" /* FormLayout */].Group,
+                  null,
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Select, {
+                    label: 'To compare',
+                    options: this.themes,
+                    onChange: this.handleChangeToCompare,
+                    value: this.state.selectedToCompare
+                  }),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Select, {
+                    label: 'With Compare',
+                    options: this.themes,
+                    onChange: this.handleChangeWithCompare,
+                    value: this.state.selectedWithCompare
+                  }),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__shopify_polaris__["f" /* TextField */], { type: 'number', label: 'Maximum order' })
+                )
               )
             )
           )

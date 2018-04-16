@@ -7,8 +7,25 @@ import {EmbeddedApp} from '@shopify/polaris/embedded';
 class Dashboard extends React.Component {
   // This line is very important! It tells React to attach the `easdk`
   // object to `this.context` within your component.
-  
+  constructor(props) {
+
+        super(props);
+        this.state = {
+            selectedToCompare:null,
+            selectedWithCompare:null,
+        };
+        this.themes = [];
+        this.handleChangeToCompare = this.handleChangeToCompare.bind(this);
+        this.handleChangeWithCompare = this.handleChangeWithCompare.bind(this);
+}
+handleChangeToCompare(newValue) {
+    this.setState({selectedToCompare: newValue});
+  }
+handleChangeWithCompare(newValue) {
+    this.setState({selectedWithCompare: newValue});
+  }
   render() {
+      
     return (
       <Page
   title="Themes"
@@ -19,13 +36,21 @@ class Dashboard extends React.Component {
     description="Shopify and your customers will use this information to contact you.">
     <Card sectioned>
       <FormLayout>
-        <TextField
-          label="Store name"
-        />
-        <TextField
-          type="email"
-          label="Account email"
-        />
+        <FormLayout.Group>
+            <Select
+                label="To compare"
+                options={this.themes}
+                onChange={this.handleChangeToCompare}
+                value={this.state.selectedToCompare}
+              />
+              <Select
+                label="With Compare"
+                options={this.themes}
+                onChange={this.handleChangeWithCompare}
+                value={this.state.selectedWithCompare}
+              />
+            <TextField type="number" label="Maximum order" />
+        </FormLayout.Group>
       </FormLayout>
     </Card>
   </Layout.AnnotatedSection>
